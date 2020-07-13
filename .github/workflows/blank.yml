@@ -1,8 +1,9 @@
 name: tag on old commit
 on: 
-  push:
-    tags: 
-      - v*
+  create:
+#   push:
+#     tags: 
+#       - v*
 jobs:
   job1:
     runs-on: ubuntu-latest
