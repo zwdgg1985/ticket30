@@ -1,6 +1,5 @@
 name: tag on old commit
-on: 
-  create:
+on: [create]
 #   push:
 #     tags: 
 #       - v*
