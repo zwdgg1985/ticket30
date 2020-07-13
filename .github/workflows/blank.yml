@@ -7,6 +7,7 @@ jobs:
   job1:
     runs-on: ubuntu-latest
     steps:
-      - name: test
-        run: |
-          echo test2
+      - name: Dump GitHub context
+        env:
+          GITHUB_CONTEXT: ${{ toJson(github) }}
+        run: echo "$GITHUB_CONTEXT"
