@@ -1,9 +1,9 @@
 name: tag on old commit
-on: [pull_request]
+on: 
 #  create:
-#   push:
-#     tags: 
-#       - v*
+  push:
+    tags: 
+      - v*
 jobs:
   job1:
     runs-on: ubuntu-latest
