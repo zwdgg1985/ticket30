@@ -1,6 +1,6 @@
 name: tag on old commit
-on: 
-  create:
+on: [pull_request]
+#  create:
 #   push:
 #     tags: 
 #       - v*
