@@ -11,4 +11,4 @@ jobs:
           -H "Accept: application/vnd.github.v3+json" \
           -H 'authorization: Bearer ${{ secrets.PAT1 }}' \
           https://api.github.com/repos/weide-zhou/ticket30/dispatches \
-          -d '{"event_type":"my-event", "client_payload": {"ref": 123}}'
+          -d '{"event_type":"my-event", "client_payload": {"var": 123}}'
