@@ -9,5 +9,4 @@ jobs:
     steps:
       - name: echo value
         run: |
-          echo ${{ github.event.client_payload.ref }}
-          echo ${{ github.event.client_payload.sha }}
+          echo ${{ github.event.client_payload.var }}
