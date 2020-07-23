@@ -1,0 +1,13 @@
+name: repoB
+on: 
+  repository_dispatch:
+    types: [my-event]
+  
+jobs:
+  repoBjobs:
+    runs-on: [ubuntu-latest]
+    steps:
+      - name: echo value
+        run: |
+          echo ${{ github.event.client_payload.ref }}
+          echo ${{ github.event.client_payload.sha }}
