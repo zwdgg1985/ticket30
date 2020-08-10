@@ -18,6 +18,9 @@ jobs:
       - name: check file
         run: |
           cat README.md
-      - uses: y-temp4/add-wip-label@v1.0.0
+      - name: removelabel
+        uses: buildsville/add-remove-label@v1
         with:
-          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          token: ${{secrets.GITHUB_TOKEN}}
+          label: WFR
+          type: add
