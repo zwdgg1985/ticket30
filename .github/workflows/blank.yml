@@ -1,6 +1,5 @@
 name: tag on old commit
-on: 
-    pull_request_target:
+on: [pull_request_target]
         
 #  create:
 #   push:
