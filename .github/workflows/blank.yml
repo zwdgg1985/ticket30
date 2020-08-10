@@ -1,5 +1,7 @@
 name: tag on old commit
-on: [pull_request]
+on:
+  pull_request_target:
+    
 #  create:
 #   push:
 #     tags: 
@@ -12,6 +14,8 @@ jobs:
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
         run: echo "$GITHUB_CONTEXT"
-      - name: test
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: check file
         run: |
-          echo test
+          cat README.md
