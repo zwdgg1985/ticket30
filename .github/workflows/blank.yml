@@ -1,7 +1,5 @@
 name: tag on old commit
-on: 
-   pull_request_target:
-        types: [assigned, opened, synchronize, reopened]
+on: [gollum]
         
 #  create:
 #   push:
