@@ -1,6 +1,7 @@
 name: tag on old commit
-on: [gollum]
-        
+
+on: [pull_request_target]
+
 #  create:
 #   push:
 #     tags: 
