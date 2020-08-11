@@ -16,6 +16,8 @@ jobs:
         run: echo "$GITHUB_CONTEXT"
       - name: checkout
         uses: actions/checkout@v2
+        with:
+            ref: B4
       - name: check file
         run: |
           cat README.md
@@ -25,3 +27,9 @@ jobs:
           token: ${{secrets.PAT1}}
           label: WFR
           type: add
+      - name: test
+        run: |
+            sh test.sh
+        env:
+            GH_TOKEN: ${{ secrets.PAT1 }}
+            GH_SHA: ${{ github.sha }}
