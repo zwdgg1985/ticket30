@@ -10,8 +10,8 @@ services:
       working_dir: /app
       volumes:
       - ./:/app
-      env_file:
-      - public.env
+#       env_file:
+#       - public.env
       #- private.env
       depends_on:
       - db
@@ -22,8 +22,8 @@ services:
       - ./:/app
       - ./db/import_schema.sql:/docker-entrypoint-initdb.d/1_import_schema.sql
       - ./db/import_demo_data.sql:/docker-entrypoint-initdb.d/2_import_demo_data.sql
-      env_file:
-      - public.env
+#       env_file:
+#       - public.env
       working_dir: /app
 volumes:
    db:
