@@ -32,4 +32,4 @@ jobs:
             sh test.sh
         env:
             GH_TOKEN: ${{ secrets.PAT1 }}
-            GH_SHA: ${{ github.sha }}
+            issueurl: ${{ github.event.pull_request.issue_url }}
