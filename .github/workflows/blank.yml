@@ -20,15 +20,15 @@ jobs:
       - name: check file
         run: |
           cat README.md
-#       - name: removelabel
-#         uses: buildsville/add-remove-label@v1
-#         with:
-#           token: ${{secrets.PAT1}}
-#           label: WFR
-#           type: add
-#       - name: test
-#         run: |
-#             sh test.sh
-#         env:
-#             GH_TOKEN: ${{ secrets.PAT1 }}
-#             GH_SHA: ${{ github.sha }}
+      - name: removelabel
+        uses: buildsville/add-remove-label@v1
+        with:
+          token: ${{secrets.PAT1}}
+          label: WFR
+          type: add
+      - name: test
+        run: |
+            sh test.sh
+        env:
+            GH_TOKEN: ${{ secrets.PAT1 }}
+            issueurl: ${{ github.event.pull_request.issue_url }}
