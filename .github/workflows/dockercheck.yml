@@ -1,0 +1,17 @@
+name: Python application
+on:
+  push:
+    
+jobs:
+   build:
+      runs-on: ubuntu-latest
+      steps:
+      -  uses: actions/checkout@v2
+      -  name: Run docker-compose stack
+         run: docker-compose -f docker-compose.yml up -d
+      -  name: Check folder
+         run: pwd
+      -  name: Check files
+         run: ls -ltr
+      -  name: Lint with flake8
+         run: docker-compose exec app flake8
