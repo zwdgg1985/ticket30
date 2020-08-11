@@ -18,9 +18,9 @@ jobs:
       - name: check file
         run: |
           cat README.md
-      - name: removelabel
-        uses: buildsville/add-remove-label@v1
-        with:
-          token: ${{secrets.GITHUB_TOKEN}}
-          label: WFR
-          type: add
+#       - name: removelabel
+#         uses: buildsville/add-remove-label@v1
+#         with:
+#           token: ${{secrets.GITHUB_TOKEN}}
+#           label: WFR
+#           type: remove
